@@ -1,0 +1,6 @@
+{
+  "name": "tagprofront",
+  "dependencies": {
+    "gulp": "^3.8.10"
+  }
+}
