@@ -1,14 +1,15 @@
-'use strict';
+(function () {
+    'use strict';
 
-angular.module('tagproFront', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'restangular', 'ui.router', 'ui.bootstrap'])
-  .config(function ($stateProvider, $urlRouterProvider) {
-    $stateProvider
-      .state('home', {
-        url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainCtrl'
-      });
+    angular
+        .module( 'tagproFront', [
+            'ngAnimate',
+            'ngCookies',
+            'ngTouch',
+            'ngSanitize',
+            'restangular',
+            'ui.router',
+            'ui.bootstrap'
+        ] );
+})();
 
-    $urlRouterProvider.otherwise('/');
-  })
-;

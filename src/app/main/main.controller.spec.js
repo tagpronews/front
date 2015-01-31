@@ -1,22 +1,20 @@
 'use strict';
 
-describe('controllers', function(){
-  var scope;
+describe( 'controllers', function () {
+    var controller;
 
-  beforeEach(module('tagproFront'));
+    beforeEach( module( 'tagproFront' ) );
 
-  beforeEach(inject(function($rootScope) {
-    scope = $rootScope.$new();
-  }));
+    beforeEach( function () {
+        controller = null;
+    } );
 
-  it('should define more than 5 awesome things', inject(function($controller) {
-    expect(scope.awesomeThings).toBeUndefined();
+    it( 'should define more than 5 awesome things', inject( function ( $controller ) {
+        expect( controller ).toBeNull();
 
-    $controller('MainCtrl', {
-      $scope: scope
-    });
+        controller = $controller( 'MainCtrl' );
 
-    expect(angular.isArray(scope.awesomeThings)).toBeTruthy();
-    expect(scope.awesomeThings.length > 5).toBeTruthy();
-  }));
-});
+        expect( angular.isArray( controller.awesomeThings ) ).toBeTruthy();
+        expect( controller.awesomeThings.length > 5 ).toBeTruthy();
+    } ) );
+} );
