@@ -4,3 +4,4 @@ bower_components/
 .tmp/
 .idea/
 dist/
+src/app/config.js
