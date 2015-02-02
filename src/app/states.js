@@ -9,9 +9,9 @@
         $stateProvider
             .state( 'home', {
                 url          : '/',
-                templateUrl  : 'app/temp/main.html',
-                controller   : 'MainCtrl',
-                controllerAs : 'main'
+                templateUrl  : 'app/application/templates/main.html',
+                controller   : 'ApplicationController',
+                controllerAs : 'vm'
             } );
 
         $urlRouterProvider.otherwise( '/' );
