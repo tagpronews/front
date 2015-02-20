@@ -1,0 +1,69 @@
+<div class="col-sm-6">
+  <div class="container-fluid">
+    <div class="jumbotron">
+      <h2>Published</h2>
+    </div>
+
+    <!-- Using tables from http://bazalt-cms.com/ng-table/ -->
+    <!-- Need to add references somewhere for this to work:
+
+    <script data-require="ng-table@*" data-semver="0.3.0" src="http://bazalt-cms.com/assets/ng-table/0.3.0/ng-table.js"></script>
+
+    <link data-require="ng-table@*" data-semver="0.3.0" rel="stylesheet" href="http://bazalt-cms.com/assets/ng-table/0.3.0/ng-table.css" />
+
+    -->
+    <div ng-app="main" ng-controller="TableCtrl">
+
+      <table ng-table class="table">
+
+        <tr ng-repeat="article in articles">
+
+          <td data-title="'Headline'">{{article.name}}</td>
+
+          <td data-title="'Category'">{{article.age}}</td>
+
+          <td data-title="'Date'">{{article.date}}</td>
+
+          <td data-title="'Author'">{{article.author}}</td>
+
+        </tr>
+
+      </table>
+    </div>
+  </div>
+</div>
+<div class="col-sm-6">
+  <div class="container-fluid">
+    <div class="jumbotron">
+      <h2>Add News</h2>
+    </div>
+
+    <form class="form" name="addnews">
+      <div class="form-group">
+        <textarea class="form-control" id="headline" rows="1" placeholder="News Headline"></textarea>
+        <div class="row">
+          <button class="btn btn-primary" type="button">Add Image</button>
+        </div>
+        <div class="row">
+          <!-- Split button -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+              Category <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">General</a></li>
+              <li><a href="#">Leagues</a></li>
+              <li><a href="#">Videos</a></li>
+              <li><a href="#">Streaming</a></li>
+              <li><a href="#">Mumble</a></li>
+              <li><a href="#">Bug</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Other</a></li>
+            </ul>
+          </div>
+        </div>
+        <textarea class="form-control" id="story" rows="10" placeholder="Story"></textarea>
+      </div>
+    </form>
+  </div>
+</div>
