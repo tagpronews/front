@@ -1,6 +1,6 @@
-var app = angular.module('main', ['ngTable']).
+var app = angular.module('addNews', ['ngGrid']);
 
-controller('TableCtrl', function($scope) {
+app.controller('TableCtrl', function($scope) {
 
 
 
@@ -17,5 +17,7 @@ controller('TableCtrl', function($scope) {
             {headline: "Some other headline becuase I can't think of anything.", category: "General", date: "1 Feb 2015", author: "odog"}
 
         ];
+
+    $scope.gridOptions = { data: 'articles' };
 
 })
